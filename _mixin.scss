@@ -1,0 +1,15 @@
+
+@mixin nav-style($color){
+    background: $color;
+    height: 45px;
+    width: 100%;
+}
+
+@mixin border-style($size,$color){
+    border: $size solid $color;
+}
+
+@mixin height-width($height,$width){
+    height: $height;
+    width: $width;
+}

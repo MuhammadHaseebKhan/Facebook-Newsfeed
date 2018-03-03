@@ -1,0 +1,542 @@
+@import "_variables.scss";
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    background: #fafafa;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    .main-nav{
+        @include height-width(50px,100%);
+        z-index: 1;
+        display: -webkit-flex;
+        background: steelblue;
+        @include border-style($test-border,red);
+        position: fixed;
+        .left-nav{
+            @include height-width(100%,18%);
+            @include border-style($test-border,white);
+            display: -webkit-flex;
+            justify-content: center;
+            .left-sub-nav-1{
+                @include height-width(70%,18%);
+                @include border-style($test-border,black);
+                margin: auto 0;
+                padding-left: 18px;
+                padding-top: 10px;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.5;
+                }
+            }
+            .left-sub-nav-2{
+                @include height-width(70%,50%);
+                @include border-style($test-border,black);
+                margin: auto 0;
+                padding-top: 6px;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.5;
+                }
+                h2{
+                    @include border-style($test-border,black);
+                    display: inline;
+                    color: white;
+                }
+            }
+        }
+        .search{
+            @include height-width(85%,30%);
+            @include border-style($test-border,black);
+            display: -webkit-flex;
+            padding-top: 10px;
+            border-bottom: 1px solid white;
+            margin-right: auto;
+            input::placeholder {
+                color: white !important;
+            }
+            .search-img{
+                @include height-width(60%,4.5%);
+                @include border-style($test-border,black);
+                margin: 0 10px;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.5;
+                }
+            }
+            .main-input{
+                @include height-width(70%,40%);
+                @include border-style($test-border,black);
+                background: transparent;
+                color: white;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.5;
+                }
+            }
+        }
+        .right-nav{
+            @include height-width(100%,30%);
+            @include border-style($test-border,black);
+            display: -webkit-flex;
+            justify-content: center;
+            .right-sub-nav-1{
+                @extend %right-sub-nav;
+                color: white;
+                padding-top: 5px;
+                margin-right: 7px;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.5;
+                }
+            }
+            .right-sub-nav-2{
+                @extend %right-sub-nav;
+                padding-top: 12px;
+                padding-left: 5px;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.5;
+                }
+            }
+            .right-sub-nav-3{
+                @extend %right-sub-nav;
+                padding-top: 12px;
+                padding-left: 5px;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.5;
+                }
+            }
+            .right-sub-nav-4{
+                @extend %right-sub-nav;
+                padding-top: 12px;
+                padding-left: 5px;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.5;
+                }
+            }
+            .right-sub-nav-5{
+                @extend %right-sub-nav;
+                padding-top: 19px;
+                padding-left: 5px;
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
+    .content-body{  
+        position: absolute;
+        top:50px;
+        display: -webkit-flex;
+        @include height-width(300%,100%);
+        @include border-style($test-border,yellow);
+        background-color: lightgray;
+        .left-side-bar{
+            @include height-width(100%,15%);
+            @include border-style($test-border,black);
+            margin-top: 10px;
+            position: fixed;
+            background: lightgray;
+            .left-side-bar-1{
+                @include height-width(auto,100%);
+                @include border-style($test-border,red);
+                margin-top: 5px;
+                .left-side-bar-1-1{
+                   @extend %left-side-bar-1-1-sample;
+                   &:hover{
+                       cursor: pointer;
+                       background: gray
+                   }
+                    .left-side-bar-1-1-1{
+                        @include height-width(100%,20%);
+                        @include border-style($test-border,black);
+                        img{
+                            margin-left: 5px;
+                            margin-top:4px;
+                        }
+                    }
+                    .left-side-bar-1-1-2{
+                        @include height-width(100%,70%);
+                        @include border-style($test-border,black);
+                        p{
+                            margin-left: 5px;
+                            margin-top: 7px;
+                        }
+                    }
+                }
+                .left-side-bar-1-2{
+                    @extend %left-side-bar-1-1-sample;
+                    margin-top: 4px;
+                    &:hover{
+                        cursor: pointer;
+                        background: gray;
+                    }
+                    .left-side-bar-1-1-1{
+                        @include height-width(100%,20%);
+                        @include border-style($test-border,black);
+                        img{
+                            margin-left: 5px;
+                            margin-top:4px;
+                        }
+                    }
+                    .left-side-bar-1-1-2{
+                        @include height-width(100%,70%);
+                        @include border-style($test-border,black);
+                        p{
+                            margin-left: 5px;
+                            margin-top: 7px;
+                        }
+                    }
+                }
+                .left-side-bar-1-3{
+                    @extend %left-side-bar-1-1-sample;
+                    margin-top: 4px;
+                    &:hover{
+                        cursor: pointer;
+                        background: gray;
+                    }
+                    .left-side-bar-1-1-1{
+                        @include height-width(100%,20%);
+                        @include border-style($test-border,black);
+                        img{
+                            margin-left: 5px;
+                            margin-top:4px;
+                        }
+                    }
+                    .left-side-bar-1-1-2{
+                        @include height-width(100%,70%);
+                        @include border-style($test-border,black);
+                        p{
+                            margin-left: 5px;
+                            margin-top: 7px;
+                        }
+                    }
+                }
+            }
+        }
+        .scrolling-body{
+            @include height-width(auto,50%);
+            @include border-style($test-border,red);
+            margin-left: 235px;
+            padding-top: 20px;
+            .scrolling-body-1{
+                @include height-width(600px,650px);
+                @include border-style($test-border,black);
+                margin: 0px auto;
+                background: white;
+                .profile{
+                    display: -webkit-flex;
+                    @include height-width(11%,100%);
+                    @include border-style($test-border,red);
+                    padding-top: 15px;
+                    .profile-pic{
+                        @include height-width(98%,12%);
+                        @include border-style($test-border,black);
+                        padding-left: 20px;
+                        &:hover{
+                            cursor: pointer;
+                            opacity: 0.5;
+                        }
+                    }
+                    .profile-name{
+                        @include height-width(98%,50%);
+                        @include border-style($test-border,black);
+                        &:hover{
+                            cursor: pointer;
+                            opacity: 0.5;
+                        }
+                        p{
+                            margin: 0;
+                        }
+                    }
+                }
+                .caption{
+                    @include height-width(9%,100%);
+                    @include border-style($test-border,black);
+                    text-indent: 20px;
+                    p{
+                        margin: 0;
+                        margin-top: 5px;
+                    }
+                }
+                .upload-photo{
+                    @include height-width(55%,100%);
+                    @include border-style($test-border,red);
+                    img{
+                        @include height-width(100%,100%);
+                        &:hover{
+                            cursor: pointer;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+                .like{
+                    @include height-width(6%,100%);
+                    @include border-style($test-border,red);
+                    ul{
+                        list-style: none;
+                        li{
+                            display: inline;
+                            margin-right: 5px;
+                            a{
+                                text-decoration: none;
+                                color: #52B5D9;
+                                &:hover{
+                                    cursor: pointer;
+                                    opacity: 0.5;
+                                }
+                            }
+                        }
+                    }
+                }
+                .reactions{
+                    @include height-width(19%,100%);
+                    @include border-style($test-border,red);
+                    background: #f2f3f5;
+                    .who-liked{
+                        display: -webkit-flex;
+                        @include height-width(30%,100%);
+                        @include border-style($test-border,black);
+                        .like-photo{
+                            @include height-width(90%,10%);
+                            @include border-style($test-border,red);
+                        }
+                        .likers-names{
+                            @include height-width(100%,90%);
+                            @include border-style($test-border,red);
+                            ul{
+                                list-style: none;
+                                @include height-width(100%,90%);
+                                @include border-style($test-border,purple);
+                                margin: 0;
+                                &:first-child{
+                                    padding-top: 8px;
+                                }
+                                li{
+                                    display: inline;
+                                    a{
+                                        text-decoration: none;
+                                        color: #52B5D9;
+                                        &:hover{
+                                            cursor: pointer;
+                                            opacity: 0.5;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .comments{
+                        display: -webkit-flex;
+                        @include height-width(100%,100%);
+                        @include border-style($test-border,black);
+                        .comment-profile-pic{
+                            @include height-width(50%,10%);
+                            @include border-style($test-border,black);
+                            img{
+                                margin-left: 14px;
+                                &:hover{
+                                    cursor: pointer;
+                                    opacity: 0.5;
+                                }
+                            }
+                        }
+                        .write-comment{
+                            @include height-width(50%,60%);
+                            @include border-style($test-border,black);
+                            input{
+                                @include height-width(50%,90%);
+                                @include border-style($test-border,black);
+                                margin-top: 5px;
+                                background: #f2f3f5;
+                                // margin-left: 5px;
+                            }
+                        }
+                        .attachment-container{
+                            display: -webkit-flex;
+                            justify-content: flex-end;
+                            @include height-width(50%,20%);
+                            @include border-style($test-border,red);
+                            margin-left: auto;
+                            .attachment{
+                                @include height-width(50%,20%);
+                                @include border-style($test-border,black);
+                                margin-top: 15px;
+                                margin-left: 5px;
+                                img:hover{
+                                    cursor: pointer;
+                                    opacity: 0.5;
+                                }                              
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .right-side-bar{
+            @include height-width(500px,25%);
+            @include border-style($test-border,purple);
+            background: white;
+            position: fixed;
+            right: 120px;
+            margin-top: 20px;
+            padding-top: 8px;
+            .event-invites{
+                display: -webkit-flex;
+                @include height-width(35px,100%);
+                @include border-style($test-border,red);
+                .event-invites-1{
+                    @include height-width(95%,12%);
+                    @include border-style($test-border,red);
+                    margin-left: 20px;
+                    img:hover{
+                        cursor: pointer;
+                        opacity: 0.5;
+                    }
+                }
+                .event-invites-2{
+                    @include height-width(95%,60%);
+                    @include border-style($test-border,red);
+                    padding-top: 5px;
+                    a{
+                        color: #52B5D9;
+                        &:hover{
+                            cursor: pointer;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+            .events-details{
+                @include height-width(25%,100%);
+                @include border-style($test-border,red);
+                // background: rosybrown;
+                .event-details-container{
+                    display: -webkit-flex;
+                    @include height-width(33%,100%);
+                    @include border-style($test-border,red);
+                    background: white;
+                    .event-details-1{
+                        @include height-width(100%,12%);
+                        @include border-style($test-border,red);
+                        margin-left: 20px;
+                        img:hover{
+                            cursor: pointer;
+                            opacity: 0.5;
+                        }
+                    }
+                    .event-details-2{ 
+                        @include height-width(100%,80%);
+                        @include border-style($test-border,red);
+                        padding-top: 5px;
+                        a{
+                            display: inline;
+                            margin: 0;
+                            color: #52B5D9;
+                            &:hover{
+                                cursor: pointer;
+                                opacity: 0.5;
+                            }
+                        }
+                        p{
+                            display: inline;
+                            margin: 0;
+                        }
+                    }
+                }
+            }
+            .advertisement{
+                @include height-width(61%,100%);
+                @include border-style($test-border,black);
+                background: white;
+                .sponsor{
+                    display: -webkit-flex;
+                    justify-content: space-between;
+                    @include height-width(15%,100%);
+                    @include border-style($test-border,black);
+                    .sponsor-name{
+                        @include height-width(75%,50%);
+                        @include border-style($test-border,black);
+                        margin-left: 10px;
+                        p{
+                            margin: 0;
+                        }
+                    }
+                    .hide-add{
+                        @include height-width(75%,20%);
+                        @include border-style($test-border,black);
+                        p{
+                            margin: 0;
+                            color: #52B5D9;
+                            &:hover{
+                                cursor: pointer;
+                                opacity: 0.5;
+                            }
+                        }
+                    }
+                }
+                .Ad-img{
+                    @include height-width(60%,100%);
+                    @include border-style($test-border,black);
+                    img{
+                        @include height-width(100%,100%);
+                        &:hover{
+                            cursor: pointer;
+                            opacity: 0.5;
+                        }
+                    }
+                }
+            }
+        }
+        .online-container{
+            position: fixed;
+            overflow-y: hidden;
+            right: 0;
+            @include height-width(682px,80px);
+            @include border-style($test-border,black);
+            background-color: lightgray;
+            &:hover{
+                overflow-y: scroll;
+            }
+            .online-friend{
+                @include height-width(40px,50px);
+                @include border-style($test-border,black);
+                margin: 0 auto;
+                margin-top: 15px;
+                img{
+                    @include height-width(40px,40px);
+                    &:hover{
+                        cursor: pointer;
+                        opacity: 0.5;
+                    }
+                }
+            }
+        }
+        .fixed-button{
+            @include height-width(50px,50px);
+            @include border-style($test-border,black);
+            background: #52B5D9;
+            position: fixed;
+            right: 130px;
+            bottom: 25px;
+            border-radius: 50%;
+            &:hover{
+                cursor: pointer;
+                opacity: 0.5;
+            }
+            img{
+                margin-left: 13px;
+                margin-top: 10px;
+            }
+        }
+
+        }
+    
+    
+}
+
